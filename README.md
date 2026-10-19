@@ -124,7 +124,8 @@ console.log(sentence.toUpperCase())     // output: "BALONKU ADA LIMA."
 #### trim()
 Mengembalikan string baru setelah dibuang kedua ruang kosongnya (ujung awal dan ujung akhir)
 ```js
-console.log(greeting.trim("   Hello world!   ")) // output: "Hello world!";
+const greeting = "   Hello world!   "
+console.log(greeting.trim()) // output: "Hello world!"
 ```
 
 ### Math
@@ -173,31 +174,41 @@ console.log(Math.pow(-7, 0.5))  // output: NaN
 ## Built-In Functions
 
 #### setTimeout()
-
+Menjalankan sebuah fungsi setelah waktu delay yang diberikan dalam milisecond
 ```js
-
+setTimeout(() => {
+  console.log("Hello world!")
+}, 1000)    // output: "Hello world!" muncul setelah 1 detik
 ```
 
 #### parseInt()
-
+Mengurai input dalam berbentuk string menjadi nilai integer sesuai dengan basis matematikanya
 ```js
-
+parseInt("100px", 10)   // output: 100
+parseInt("12.50", 10)   // output: 12
+parseInt("abc42", 10)   // NaN
 ```
 
 #### parseFloat()
-
+Mengurai input dalam bentuk string menjadi nilai float
 ```js
-
+parseFloat("  3.14  ")  // output: 3.14
+parseFloat("FF2")       // output: NaN
 ```
 
 #### isFinite()
-
+Mengecek apakah input adalah angka yang terbatas (finite number) atau bukan (Infinity, -Infinity, NaN)
 ```js
-
+isFinite(0)         // true
+isFinite(2e64)      // true
+isFinite(910)       // true
+isFinite(Infinity)  // false
+isFinite(NaN)       // false
 ```
 
 #### encodeURIComponent()
-
+Mengubah penulisan kode dari string/path khususnya pada karakter spesifik (contoh: &, =, ?, atau " ") menjadi karakter UTF-8
 ```js
-
+const query = "Jack & Jill"
+console.log(encodeURIComponent(query)) // output: Jack%20%26%20Jill
 ```

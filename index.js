@@ -34,28 +34,28 @@ console.log(array.some(genap));     // output: true
 
 // Number
 
-// 1. isFinite()
+// 6. isFinite()
 console.log(Number.isFinite(1 / 0))     // output: false
 console.log(Number.isFinite(10 * 5))    // output: true
 console.log(Number.isFinite(0 / 0))     // output: false
 
-// 2. isInteger()
+// 7. isInteger()
 console.log(Number.isInteger(2))        // output: true
 console.log(Number.isInteger(2.5))      // output: false
 
-// 3. parseInt()
+// 8. parseInt()
 Number.parseInt("  42  ", 10)   // output: 42
 Number.parseInt("42px", 10)     // output: 42
 Number.parseInt("abc123", 10)   // output: NaN
 Number.parseInt("3.14", 10)     // output: 3
 Number.parseInt("101", 2)       // output: 5
 
-// 4. toFixed()
+// 9. toFixed()
 const num = 123.4567
 num.toFixed()     // output: '123'
 num.toFixed(2)    // output: '123.45'
 
-// 5. toString()
+// 10. toString()
 console.log((20).toString())    // "20"
 console.log((17.2).toString())  // "17.2"
 console.log((6).toString(2))    // "110"
@@ -64,51 +64,53 @@ console.log((6).toString(2))    // "110"
 
 // String
 
-// 1. repeat()
+// 11. repeat()
 console.log("* ".repeat(3))     // output: "* * * "
 
-// 2. slice()
+// 12. slice()
+const kalimat = "Kemarin ada mobil mencurigakan di depan pintu."
 console.log(kalimat.slice(0, 7))    // output: "Kemarin"" ada mobil mencurigakan di depan pintu."
 console.log(kalimat.slice(7))       // output: " ada mobil mencurigakan di depan pintu."
 console.log(kalimat.slice(-3))      // output: "tu."
 
-// 3. split()
+// 13. split()
 console.log("Ini Budi.".split(" "))     // output: ["Ini", "Budi."]
 console.log("Ini-ibu-Budi.".split("-")) // output: ["Ini", "ibu", "Budi."]
 
-// 4. toUpperCase()
+// 14. toUpperCase()
 const sentence = "Balonku ada lima."
 console.log(sentence.toUpperCase())     // output: "BALONKU ADA LIMA."
 
-// 5. trim()
-console.log(greeting.trim("   Hello world!   ")) // output: "Hello world!";
+// 15. trim()
+const greeting = "   Hello world!   "
+console.log(greeting.trim()) // output: "Hello world!"
 
 // ------------------------- //
 
 // Math
 
-// 1. Math.abs()
+// 16. Math.abs()
 console.log(Math.abs(1-12))     // output: 11
 console.log(Math.abs(1.2-7.9))  // output: 6.7
 
-// 2. Math.round()
+// 17. Math.round()
 console.log(Math.round(1.49))   // output: 1
 console.log(Math.round(5.5))    // output: 6
 console.log(Math.round(-5.05))  // output: -5
 
-// 3. Math.max()
+// 18. Math.max()
 const arrayMax = [-1, -2, -3]
 console.log(Math.max(...arrayMax)) // output: -1
 console.log(Math.max(1, 2, 3))  // output: 3
 console.log(Math.max())         // output: -Infinity
 
-// 4. Math.min()
+// 19. Math.min()
 const arrayMin = [2, 3, 1];
 console.log(Math.min(...arrayMin))     // output: 1
 console.log(Math.min(-2, -3, -1))   // output: -3
 console.log(Math.min())             // output: Infinity
 
-// 5. Math.random()
+// 20. Math.random()
 console.log(Math.pow(5, 3))     // output: 125
 console.log(Math.pow(4, 0.5))   // output: 2
 console.log(Math.pow(-7, 0.5))  // output: NaN
@@ -117,3 +119,27 @@ console.log(Math.pow(-7, 0.5))  // output: NaN
 
 // Built-In Functions
 
+// 21. setTimeout()
+setTimeout(() => {
+  console.log("Hello world!")
+}, 1000)    // output: "Hello world!" muncul setelah 1 detik
+
+// 22. parseInt()
+console.log(parseInt("100px", 10))   // output: 100
+console.log(parseInt("12.50", 10))   // output: 12
+console.log(parseInt("abc42", 10))   // NaN
+
+// 23. parseFloat()
+console.log(parseFloat("  3.14  "))  // output: 3.14
+console.log(parseFloat("FF2"))       // output: NaN
+
+// 24. isFinite()
+console.log(isFinite(0))         // true
+console.log(isFinite(2e64))      // true
+console.log(isFinite(910))       // true
+console.log(isFinite(Infinity))  // false
+console.log(isFinite(NaN))       // false
+
+// 25. encodeURIComponent()
+const query = "Jack & Jill"
+console.log(encodeURIComponent(query)) // output: Jack%20%26%20Jill
