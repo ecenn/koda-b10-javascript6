@@ -1,0 +1,29 @@
+{
+  "name": "koda-b10-javascript6",
+  "version": "1.0.0",
+  "description": "menggabungkan 2 atau lebih array menjadi array baru\r ```js\r const array1 = [100, 101]\r const array2 = [207, 208]\r const array3 = [\"a\", \"b\"]\r const array4 = array1.concat(array2, array3);\r console.log(array4)     // output: [100, 101, 201, 202, 'a', 'b']\r ```",
+  "homepage": "https://github.com/ecenn/koda-b10-javascript6#readme",
+  "bugs": {
+    "url": "https://github.com/ecenn/koda-b10-javascript6/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecenn/koda-b10-javascript6.git"
+  },
+  "license": "MIT",
+  "author": "Jason Felix",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0"
+  }
+}
